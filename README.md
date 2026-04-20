@@ -1,4 +1,4 @@
-# Agentic Setup
+# Agent Setup
 
 ## Intro
 
