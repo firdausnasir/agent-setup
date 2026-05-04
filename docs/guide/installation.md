@@ -46,6 +46,7 @@ The expected installed skills are:
 - `verify`
 - `code-philosophy`
 - `frontend-philosophy`
+- `write-a-skill`
 
 ## Agent Detection
 
@@ -127,7 +128,7 @@ Do not claim success until you have checked the destination directory directly.
 Minimum proof:
 
 - the destination directory exists
-- the ten expected skill folders exist
+- the eleven expected skill folders exist
 - each installed skill contains `SKILL.md`
 - bundled supporting files are still present where expected
 

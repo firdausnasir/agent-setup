@@ -36,10 +36,35 @@ When a task can be parallelized, record:
 - dependencies that must be complete first
 - the verification expected from the assignee
 
+## Execution contract
+
+Every plan should contain an execution contract. This is the minimum artifact that lets an orchestrator decide how to run the work.
+
+Capture:
+
+- chosen execution pattern
+- task graph or wave order
+- owned files or ownership boundaries per task
+- forbidden scope when file ownership is tight
+- dependencies that gate each task
+- acceptance criteria
+- proof command for each task or wave
+- integration checkpoint
+- final verification checkpoint
+
+Choose the simplest pattern that fits:
+
+- single-threaded: use when the work is small or ownership overlaps too much
+- prep line: use for independent variations where a human or orchestrator will select results
+- dinner rush: use for parallel builders on disjoint files
+- courses in sequence: use for parallel waves with strict ordering between waves
+- prep-to-plate: use for sequential handoff pipelines such as research, build, test, document
+
 ## Recommended plan shape
 
 - goal
 - durable decisions
+- execution contract
 - task title
 - objective
 - context

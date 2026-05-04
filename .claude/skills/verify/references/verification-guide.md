@@ -18,6 +18,12 @@ Before any success claim:
 4. Confirm the exit status.
 5. Only then report the result.
 
+Apply this at the right boundary:
+
+- task verification: proves the current ticket
+- wave verification: proves a whole dependency group before the next wave starts
+- final verification: proves the integrated result before completion
+
 ## Common traps
 
 - saying "should work" instead of proving it
@@ -36,3 +42,9 @@ Map the work to proof such as:
 - typecheck
 - build
 - manual evidence for user-facing flows when necessary
+
+In multi-agent runs:
+
+- do not unlock downstream work without the upstream proof
+- do not let builders certify their own work as the only evidence
+- keep verification evidence attached to the task or wave it proves

@@ -97,6 +97,7 @@ This bundle includes:
 - `verify`
 - `code-philosophy`
 - `frontend-philosophy`
+- `write-a-skill`
 
 Repo layout:
 
@@ -120,13 +121,13 @@ High-level flow:
 2. `write-prd`
    Use for hard or very hard work that needs a durable artifact before planning.
 3. `write-plan`
-   Turn the clarified task or PRD into an implementation plan.
+   Turn the clarified task or PRD into an implementation plan with execution boundaries.
 4. `implement`
    Execute the plan with minimal, targeted changes.
 5. `subagent-driven-development`
-   Use only when parallel work is clearly safe.
+   Use only when parallel work is clearly safe and ownership is isolated.
 6. `verify`
-   Prove the result before saying the work is complete.
+   Prove the result at the right boundary before saying the work is complete.
 
 `execution-guidelines` applies across non-trivial stages.
 
@@ -173,3 +174,7 @@ Guidance for simple, explicit, readable internal logic.
 ### `frontend-philosophy`
 
 Guidance for intentional UI work instead of generic UI output.
+
+### `write-a-skill`
+
+Creates or improves a reusable skill with the right structure and supporting references.

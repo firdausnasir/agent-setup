@@ -13,13 +13,30 @@ Create the implementation plan from approved requirements.
 2. Explore the codebase if architecture and integration boundaries are not already confirmed.
 3. Prefer tracer-bullet vertical slices over horizontal layer-only phases.
 4. Write enough context that another agent can execute each task without extra conversation.
-5. Mark whether each task can be parallelized.
-6. For parallel work, define the isolation boundary clearly.
-7. Do not implement here.
+5. Build an execution contract, not just a task list.
+6. Mark whether each task can be parallelized.
+7. For parallel work, define the isolation boundary clearly.
+8. Group dependent tasks into waves when the work benefits from phased parallel execution.
+9. Choose the execution pattern that fits the work:
+   - single-threaded
+   - prep line
+   - dinner rush
+   - courses in sequence
+   - prep-to-plate
+10. Record the proving command for each task or wave.
+11. Do not implement here.
 
 ## Output
 
 - Unless the user explicitly wants chat-only output, write the final plan to `./plans/<feature-name>.md`.
+- The plan must include an execution contract with:
+  - chosen pattern
+  - task graph or ordered waves
+  - ownership boundary per task
+  - dependencies per task
+  - acceptance criteria per task
+  - proving command per task or wave
+  - integration checkpoint and final verification checkpoint
 
 ## Resources
 

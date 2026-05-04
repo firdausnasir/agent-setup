@@ -7,6 +7,7 @@ This skill exists to parallelize implementation work only when the plan has clea
 Use it when:
 
 - the plan already exists
+- the execution contract already exists
 - tasks are explicitly parallelizable
 - ownership boundaries are clear enough to avoid merge chaos
 
@@ -24,11 +25,22 @@ Each subagent should receive:
 - task title
 - objective
 - context
+- owned files or ownership boundary
 - allowed scope
 - forbidden scope
 - dependencies
+- acceptance criteria
 - required verification
 - handoff format
+
+Use minimum viable context. Do not paste the entire parent thread or a long master plan when the task can be described locally.
+
+## Pattern mapping
+
+- prep line: same brief, many isolated variants, results compared after the run
+- dinner rush: one wave of independent builders on disjoint files
+- courses in sequence: multiple waves, each wave blocked on the prior wave's verification
+- prep-to-plate: sequential handoff where each subagent advances one observable stage
 
 ## Isolation strategies
 
@@ -46,6 +58,13 @@ After a subagent reports completion:
 2. verify the task actually matches the assignment
 3. merge only after the result is reviewable
 4. resolve conflicts in favor of the approved plan, not the loudest diff
+
+## Verification discipline
+
+- verify each task before declaring it done
+- verify each wave before unlocking the next wave
+- run a final top-level verification pass after integration
+- do not let the builder self-certify the whole workflow without independent checks
 
 ## Anti-patterns
 
